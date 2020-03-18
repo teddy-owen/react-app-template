@@ -1,0 +1,39 @@
+html{
+    height: 100%;
+}
+
+body > #root > div {
+    min-height: 100vh;
+}
+
+body{
+    color:#4c4c4c;
+    margin:0px;
+}
+
+.fade-in-animation{
+    animation: fadein 250ms;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.my-node-enter {
+    opacity: 0;
+}
+.my-node-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+.my-node-exit {
+    opacity: 1;
+}
+.my-node-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Jura&display=swap');

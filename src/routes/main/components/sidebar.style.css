@@ -1,0 +1,29 @@
+.close-animation{
+  animation-name: close;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+.open-animation{
+  animation-name: open;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes close {
+  from { }
+  to   { 
+    width: 0px;
+    padding-left: 0px;
+    padding-right: 0px; 
+  }
+}
+
+@keyframes open {
+  from { 
+    width: 0px;
+    padding-left: 0px;
+    padding-right: 0px; 
+  }
+  to   { }
+}
