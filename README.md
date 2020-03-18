@@ -1,4 +1,4 @@
-# admin-panel
+# React App Template
 
 ## Project Development Dependencies
 - [Node >= 8.10](https://nodejs.org/en/)
