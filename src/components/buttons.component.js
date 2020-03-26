@@ -84,6 +84,7 @@ class PrimaryButton extends React.Component{
         loading:PropTypes.bool,
         disabled:PropTypes.bool,
         small:PropTypes.bool,
+        verticalExpand:PropTypes.bool,
     };
     
     render(){
@@ -97,7 +98,7 @@ class PrimaryButton extends React.Component{
                 padding:this.props.small? "0px":"7px",
                 minWidth:this.props.small?"0px":"100px",
                 width:"100%",
-                height:this.props.small? "30px":"40px",
+                height:this.props.verticalExpand? "100%":(this.props.small? "30px":"40px"),
                 fontSize:"1rem",
                 color:"white",
                 outline:"none",

@@ -87,7 +87,7 @@ class Auth extends React.Component{
                         // store token
                         JWT.storeToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");                                    
                         // navigate to next screen
-                        this.props.history.push(Navigation.paths.root);
+                        this.props.history.push(Navigation.paths.app);
                     }}>
                         DEVELOPMENT AUTH BYPASS
                     </button>

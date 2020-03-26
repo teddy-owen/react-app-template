@@ -69,7 +69,7 @@ class Register extends React.Component{
             this.setState({loading:false});
             
             // navigate to next screen
-            this.props.history.push(Navigation.paths.root);
+            this.props.history.push(Navigation.paths.app);
             
         } catch (error) {
             let errorMsg = await error.json();

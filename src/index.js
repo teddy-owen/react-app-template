@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import Auth from './routes/auth/auth.route.js';
 import Main from './routes/main/main.route.js';
+import Landing from './routes/landing/landing.route.js';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -36,11 +37,14 @@ function App(){
                 <Route path={Navigation.paths.auth}>
                     <Auth/>
                 </Route>
-                <Route path={Navigation.paths.root}>
+                <Route path={Navigation.paths.app}>
                     <Main/> 
                 </Route>
+                <Route path={Navigation.paths.root} exact={true}>
+                    <Landing/>
+                </Route>
                 <Route>
-                    <Redirect to={Navigation.paths.register} />
+                    <Redirect to={Navigation.paths.root} />
                 </Route>
             </Switch>
         </Router>        

@@ -6,23 +6,24 @@ class Navigation{
         login:"/auth/login",
         register:"/auth/register",
         forgotPassword:"/auth/forgot-password",
-        quizzes:"/quizzes",
-        quizDetail:"/quizzes/:id",
-        qaDetail:"/quizzes/:id/qa/:qaid",
-        qaAdd:"/quizzes/:id/qa/add",
-        manageAccount:"/manage-account",
+        app:"/app",
+        quizzes:"/app/quizzes",
+        quizDetail:"/app/quizzes/:id",
+        qaDetail:"/app/quizzes/:id/qa/:qaid",
+        qaAdd:"/app/quizzes/:id/qa/add",
+        manageAccount:"/app/manage-account",
     };
 
     static generateQuizDetailPath(id){
-        return `/quizzes/${id}`;
+        return `/app/quizzes/${id}`;
     }
     
     static generateQaAddPath(quizId){
-        return `/quizzes/${quizId}/qa/add`;
+        return `/app/quizzes/${quizId}/qa/add`;
     }
 
     static generateQaDetailPath(quizId,qaId){
-        return `/quizzes/${quizId}/qa/${qaId}`;
+        return `/app/quizzes/${quizId}/qa/${qaId}`;
     }
 
 }

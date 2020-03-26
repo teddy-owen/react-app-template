@@ -1,5 +1,6 @@
 class Theme{
     static fontFamily="'Jura', sans-serif";
+    static secondaryFontFamily="'Roboto', sans-serif";
     static primaryButtonColor="#FF6978"; 
     static buttonFontFamily="'Arial'";
     static color1="#6515E4";
