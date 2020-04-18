@@ -1,5 +1,16 @@
 # React App Template
 
+## Init a new repo with this project
+```
+git clone --depth=1 --branch=master https://github.com/teddy-owen/react-app-template.git web-app
+rm -rf ./web-app/.git
+cd web-app
+git init
+git remote add origin [NEW REMOTE REPO]
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+```
 ## Project Development Dependencies
 - [Node >= 8.10](https://nodejs.org/en/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/install)
