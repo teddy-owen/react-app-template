@@ -1,8 +1,9 @@
 import URLService from "services/url.service.js";
 import JWT from "services/jwt.service.js";
+import Navigation from "services/navigation.service.js";
 
 class HTTPService{
-    static async _httpGET(url){
+    static async _httpGET(url,props=null){
         // Check if token expired, and refresh if so
         await HTTPService.checkAndRefreshToken();
         
@@ -22,6 +23,7 @@ class HTTPService{
             return responseJson;
         }else if(response.status === 401 || response.status === 403){
             // Redirect to Login
+            props.history.push(Navigation.paths.login);
             throw response;
         }else{
             throw response;
@@ -29,7 +31,7 @@ class HTTPService{
 
     }
 
-    static async _httpPOST(url,json,checkToken=true,logoutOn401=true){
+    static async _httpPOST(url,json,checkToken=true,logoutOn401=true,props=null){
         // Check if token expired, and refresh if so
         if(checkToken){
             await HTTPService.checkAndRefreshToken();
@@ -56,6 +58,7 @@ class HTTPService{
             }
         }else if((response.status === 401 || response.status === 403) && logoutOn401){
             // Redirect to Login
+            props.history.push(Navigation.paths.login);
             throw response;
         }else{
             throw response;
@@ -63,7 +66,7 @@ class HTTPService{
 
     }
 
-    static async _httpPUT(url,json,checkToken=true,logoutOn401=true){
+    static async _httpPUT(url,json,checkToken=true,logoutOn401=true,props=null){
         // Check if token expired, and refresh if so
         if(checkToken){
             await HTTPService.checkAndRefreshToken();
@@ -90,6 +93,7 @@ class HTTPService{
             }
         }else if((response.status === 401 || response.status === 403) && logoutOn401){
             // Redirect to Login
+            props.history.push(Navigation.paths.login);
             throw response;
         }else{
             throw response;
@@ -97,7 +101,7 @@ class HTTPService{
 
     }
     
-    static async _httpDELETE(url){
+    static async _httpDELETE(url,props=null){
         // Check if token expired, and refresh if so
         await HTTPService.checkAndRefreshToken();
         
@@ -120,6 +124,7 @@ class HTTPService{
             }
         }else if(response.status === 401 || response.status === 403){
             // Redirect to Login
+            props.history.push(Navigation.paths.login);
             throw response;
         }else{
             throw response;
