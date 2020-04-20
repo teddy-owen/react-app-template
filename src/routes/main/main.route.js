@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
+  withRouter
 } from "react-router-dom";
 
 import JWT from "services/jwt.service";
@@ -79,4 +80,4 @@ class Main extends React.Component{
 }
 
 
-export default Main;
+export default withRouter(Main);
