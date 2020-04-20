@@ -34,7 +34,7 @@ class TopBar extends React.Component{
         display:"flex",
         justifyContent:"space-between",
         alignItems:"center",
-        backgroundColor:"rgb(255, 105, 120)",
+        backgroundColor:Theme.color2,
         height:"56px",
         padding:"0px 20px 0px 20px",
         boxShadow:"rgba(0, 0, 0, 0.44) 36px 0px 8px -26px inset",
