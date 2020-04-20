@@ -21,3 +21,7 @@ export {
     FlexRowAroundCenter,
     FlexColumnAroundCenter,
 } from "./flex.component.js";
+
+export {
+    Card,
+} from "./card.component.js";
