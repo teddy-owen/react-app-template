@@ -11,6 +11,9 @@ import {PrimaryButton,
   PasswordInput,
   InputErrorMessage,
 } from "components";
+import { 
+  withRouter,
+} from "react-router-dom";
 import QuizList from "./components/quiz-list.component";
 
 class Home extends React.Component{
@@ -196,4 +199,4 @@ class Home extends React.Component{
 }
 
 
-export default Home;
+export default withRouter(Home);
