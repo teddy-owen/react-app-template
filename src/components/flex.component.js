@@ -146,6 +146,119 @@ class FlexColumnBetweenCenter extends React.Component{
 }
 
 //////////////////////////////
+// Center
+//////////////////////////////
+
+class FlexRowCenterStretch extends React.Component{
+  constructor(props) {
+      super(props);
+      this.state={
+      };
+  }
+  
+  static propTypes={
+      children:PropTypes.node,
+      style:PropTypes.object,
+  };
+
+  render(){
+      return (
+        <FlexBox 
+        column={false} 
+        justify={"center"} 
+        align={"stretch"}
+        style={{
+          ...this.props.style,
+        }}>
+          {this.props.children}
+        </FlexBox>
+      );
+  }
+}
+
+
+class FlexColumnCenterStretch extends React.Component{
+  constructor(props) {
+      super(props);
+      this.state={
+      };
+  }
+  
+  static propTypes={
+      children:PropTypes.node,
+      style:PropTypes.object,
+  };
+
+  render(){
+      return (
+        <FlexBox 
+        column={true} 
+        justify={"center"} 
+        align={"stretch"}
+        style={{
+          ...this.props.style,
+        }}>
+          {this.props.children}
+        </FlexBox>
+      );
+  }
+}
+
+class FlexRowCenterCenter extends React.Component{
+  constructor(props) {
+      super(props);
+      this.state={
+      };
+  }
+  
+  static propTypes={
+      children:PropTypes.node,
+      style:PropTypes.object,
+  };
+
+  render(){
+      return (
+        <FlexBox 
+        column={false} 
+        justify={"center"} 
+        align={"center"}
+        style={{
+          ...this.props.style,
+        }}>
+          {this.props.children}
+        </FlexBox>
+      );
+  }
+}
+
+class FlexColumnCenterCenter extends React.Component{
+  constructor(props) {
+      super(props);
+      this.state={
+      };
+  }
+  
+  static propTypes={
+      children:PropTypes.node,
+      style:PropTypes.object,
+  };
+
+  render(){
+      return (
+        <FlexBox 
+        column={true} 
+        justify={"center"} 
+        align={"center"}
+        style={{
+          ...this.props.style,
+        }}>
+          {this.props.children}
+        </FlexBox>
+      );
+  }
+}
+
+//////////////////////////////
 // Start
 //////////////////////////////
 class FlexRowStartStretch extends React.Component{
@@ -500,4 +613,8 @@ export {
   FlexColumnAroundStretch,
   FlexRowAroundCenter,
   FlexColumnAroundCenter,
+  FlexRowCenterStretch,
+  FlexColumnCenterStretch,
+  FlexRowCenterCenter,
+  FlexColumnCenterCenter,
 };
